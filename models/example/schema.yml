@@ -19,11 +19,4 @@ models:
             tests:
                 - unique
                 - not_null
- - name: stg_actor
-      description: "Test not null actors"
-      columns:
-          - name: actor_id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+
