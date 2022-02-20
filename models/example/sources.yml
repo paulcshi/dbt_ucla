@@ -5,4 +5,8 @@ sources:
     database: sakila_raw
     tables:
       - name: actor
+      - name: address
+      - name: staff
+      - name: store
+
 
