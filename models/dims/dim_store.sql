@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 select 
-    stg_store.store.id,
+    stg_store.store_id,
 
     stg_address.district,
     stg_address.address,
