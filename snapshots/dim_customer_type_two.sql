@@ -14,7 +14,7 @@ SELECT
     c.CUSTOMER_ID,
 	c.FIRST_NAME,
 	c.LAST_NAME,
-	CONCAT (FIRST_NAME,	',',LAST_NAME	) AS firstlastname,
+	CONCAT (FIRST_NAME,	',',LAST_NAME) AS firstlastname,
 	c.EMAIL,
 	a.address AS customer_address,
 	a.address2 AS customer_address2,
