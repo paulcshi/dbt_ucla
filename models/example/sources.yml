@@ -9,6 +9,9 @@ sources:
       - name: staff
       - name: store
       - name: customer
+      - name: address
+      - name: city
+      - name: country
 
 
 
