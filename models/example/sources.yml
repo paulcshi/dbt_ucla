@@ -8,5 +8,10 @@ sources:
       - name: address
       - name: staff
       - name: store
+      - name: customer
+      - name: city
+      - name: country
+      - name: rental
+
 
 
