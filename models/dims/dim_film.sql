@@ -11,10 +11,10 @@ SELECT
 	f.REPLACEMENT_COST,
 	f.LENGTH
 FROM 
-    {{ref('stg_film')}}
-JOIN {{ref('stg_language')}}
-    ON stg_film.language_id = stg_language.language_id
-JOIN {{ref('stg_film_category')}}
-    ON stg_film.film_id = stg_film_category.film_id
-JOIN {{ref('stg_category')}} 
-    ON stg_film_category.category_id = stg_category.category_id
+    {{ref('stg_film')}} f
+JOIN {{ref('stg_language')}} l
+    ON f.language_id = l.language_id
+JOIN {{ref('stg_film_category')}} fc
+    ON f.film_id = fc.film_id
+JOIN {{ref('stg_category')}} c
+    ON fc.category_id = c.category_id
