@@ -28,9 +28,9 @@ p.amount
 -- select count(*)
 FROM  
     {{ref('stg_rental')}} r
-     JOIN {{ source('analytics', 'date_dim') }}  d 
+     JOIN {{ source('dbt_cshih', 'date_dim') }}  d 
         ON to_number(to_varchar(to_date(r.rental_date),'YYYYMMDD')) = d.DATE_KEY
-     JOIN {{ source('analytics', 'timeofday_dim') }} tod 
+     JOIN {{ source('dbt_cshih', 'timeofday_dim') }} tod 
         ON HOUR(r.rental_date) = tod.HROFDAY AND MINUTE(r.rental_date) = tod.MINOFDAY
      JOIN {{ source('analytics', 'timeofday_dim') }} c 
         ON r.customer_id = c.customer_id

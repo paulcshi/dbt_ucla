@@ -19,7 +19,7 @@ sources:
       - name: inventory
       - name: payment
 
-  - name: analytics
+  - name: dbt_cshih
     database: sakila_dw
     tables:
       - name: date_dim
