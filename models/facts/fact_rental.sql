@@ -34,7 +34,7 @@ FROM
         ON HOUR(r.rental_date) = tod.HROFDAY AND MINUTE(r.rental_date) = tod.MINOFDAY
      JOIN {{ source('analytics', 'timeofday_dim') }} c 
         ON r.customer_id = c.customer_id
-     JOIN {{ref('stg_inventoery')}} i 
+     JOIN {{ref('stg_inventory')}} i 
         ON r.inventory_id = i.inventory_id
      JOIN {{ref('dim_store')}} sl 
         ON i.store_id = sl.STORE_ID
