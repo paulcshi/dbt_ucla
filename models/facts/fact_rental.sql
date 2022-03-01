@@ -28,11 +28,11 @@ p.amount
 -- select count(*)
 FROM  
     {{ref('stg_rental')}} r
-     JOIN {{ source('dbt_cshih', 'date_dim') }}  d 
+     JOIN {{ref('dim_date')}}}  d 
         ON to_number(to_varchar(to_date(r.rental_date),'YYYYMMDD')) = d.DATE_KEY
-     JOIN {{ source('dbt_cshih', 'timeofday_dim') }} tod 
+     JOIN {{ref('dim_timeofday')}}} tod 
         ON HOUR(r.rental_date) = tod.HROFDAY AND MINUTE(r.rental_date) = tod.MINOFDAY
-     JOIN {{ref('stg_customer')}}} c 
+     JOIN {{ref('dim_customer')}}} c 
         ON r.customer_id = c.customer_id
      JOIN {{ref('stg_inventory')}} i 
         ON r.inventory_id = i.inventory_id

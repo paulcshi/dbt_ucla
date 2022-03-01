@@ -19,12 +19,6 @@ sources:
       - name: inventory
       - name: payment
 
-  - name: dbt_cshih
-    database: sakila_dw
-    tables:
-      - name: date_dim
-      - name: timeofday_dim
-      
 
   #  - name: analytics
   #    database: sakila_dw
