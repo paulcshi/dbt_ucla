@@ -32,7 +32,7 @@ FROM
         ON to_number(to_varchar(to_date(r.rental_date),'YYYYMMDD')) = d.DATE_KEY
      JOIN {{ source('dbt_cshih', 'timeofday_dim') }} tod 
         ON HOUR(r.rental_date) = tod.HROFDAY AND MINUTE(r.rental_date) = tod.MINOFDAY
-     JOIN {{ source('analytics', 'timeofday_dim') }} c 
+     JOIN {{ref('stg_customer')}}} c 
         ON r.customer_id = c.customer_id
      JOIN {{ref('stg_inventory')}} i 
         ON r.inventory_id = i.inventory_id
