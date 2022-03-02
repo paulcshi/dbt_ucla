@@ -12,6 +12,49 @@ sources:
       - name: city
       - name: country
       - name: rental
+      - name: film
+      - name: language
+      - name: film_category
+      - name: category
+      - name: inventory
+      - name: payment
 
+
+  #  - name: analytics
+  #    database: sakila_dw
+  #    tables:
+  #      - name: date_dim
+  #      - name: timeofday_dim
+
+
+
+# version: 2
+
+# sources:
+#   - name: mysql_rds_sakila
+#     database: sakila_raw
+#     tables:
+#       - name: actor
+#       - name: address
+#       - name: staff
+#       - name: store
+#       - name: customer
+#       - name: city
+#       - name: country
+#       - name: rental
+#       - name: film
+#       - name: language
+#       - name: film_category
+#       - name: category
+#       - name: inventory
+#       - name: payment
+
+  # - name: analytics
+  #   database: sakila_dw
+  #   tables:
+  #      - name: date_dim
+  #      - name: timeofday_dim
+
+    
 
 
