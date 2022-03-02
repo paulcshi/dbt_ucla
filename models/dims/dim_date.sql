@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 select DATE_PKEY,
 		DATE_COLUMN,
         FULL_DATE_DESC,

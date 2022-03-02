@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 WITH CTE_MINUTE AS (
     	select 
 			TIMEADD(minute, SEQ4(), '2017-01-01 00:00:00') as TEMP_TIMESTAMP,  
